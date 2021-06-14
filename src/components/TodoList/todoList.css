@@ -1,0 +1,38 @@
+.todos {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.todoList {
+    list-style: none;
+    font-family: "Bodoni MT";
+    font-size: 1.3rem;
+    color: #172b4d;
+    width: 35%;
+}
+.todoItem {
+    width: 30%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+.submit {
+    border: none;
+    background: none;
+}
+.iconButton {
+    color: #ff9f33;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.todoInput {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #172b4d;
+    padding: 10px;
+}
+.todoInput:focus {
+    outline: none;
+}
