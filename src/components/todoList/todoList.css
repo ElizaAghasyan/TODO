@@ -1,0 +1,30 @@
+.submit {
+    border: none;
+    background: none;
+}
+
+li {
+    list-style: none;
+}
+
+.iconButton {
+    font-size: 1rem;
+    cursor: pointer;
+}
+.todoItem {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-around;
+}
+.todoInput {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #172b4d;
+    background: none;
+}
+
+.todoInput:focus {
+    outline: none;
+}

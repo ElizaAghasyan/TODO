@@ -1,26 +1,18 @@
-.form {
-    width: 50%
-}
 .addTodo {
-    width:100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 25px;
 }
+
 .addInput {
-    width: 75%;
-    margin: 65px 10px;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid #172b4d;
     padding: 10px;
-}
-.addInput:focus{
-    outline: none;
-}
-.addBtn {
-    border: none;
     background: none;
-    font-size: 1.8rem;
-    cursor: pointer;
+}
+
+.addInput:focus {
+    outline: none;
 }
