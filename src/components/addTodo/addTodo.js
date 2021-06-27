@@ -1,25 +1,42 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
+import { nanoid } from "nanoid";
+import { useDispatch } from "react-redux";
+import { addTodo } from '../../redux/actions';
+
 import './addTodo.css';
-import AddIcon from '@material-ui/icons/Add';
+import Button from '@material-ui/core/Button';
 
-
-const AddTodo = ({ addTodo }) => {
-    let addTodoRef = useRef()
-
-    const handleAdd = () => {
-        addTodo(addTodoRef.current.value);
-        addTodoRef.current.value = ''
-    }
-
-
+const AddTodo = () => {
+    let dispatch = useDispatch();
+    let [name, setName] = useState();
 
     return (
-        <div className='addTodo'>
-            <form className='form' onSubmit={(e) => {
+        <div>
+            <form onSubmit={(e) => {
                 e.preventDefault()
             }}>
-                <input className='addInput' ref={addTodoRef}/>
-                <button className='btn' type='submit' onClick={handleAdd}><AddIcon /></button>
+                <input
+                    className="input"
+                    value={name}
+                    type="text"
+                    onChange={(e) =>
+                    {
+                        setName(e.target.value)
+                    }}
+                />
+                <Button
+                    variant="contained"
+                    className="btn"
+                    color="primary"
+                    onClick={() => dispatch(addTodo({
+                            id: nanoid(),
+                            title: name,
+                            complete: false
+                        }),
+                        setName(""),
+                    )}>
+                    Add
+                </Button>
             </form>
         </div>
     );

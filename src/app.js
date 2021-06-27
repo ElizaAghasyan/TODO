@@ -1,28 +1,17 @@
-import React, { useState } from "react";
-import './app.css';
+import React from "react";
 import AddTodo from "./components/addTodo/addTodo";
-import TodoList from "./components/todoList/todoList";
+import Item from "./components/item/item"
+import Header from '../src/components/header/header'
+
+import './app.css';
 
 const App = () => {
-    const [todo, setTodo] = useState([]);
-
-    const addTodo = (value) => {
-        setTodo([
-            ...todo,
-            {
-                id: Math.random(),
-                title: value,
-                status: true
-            }]
-
-        )
-    }
-
     return (
         <div className="App">
-            <div className="containerTodo">
-                <AddTodo addTodo={addTodo} />
-                <TodoList addTodo={addTodo} todo={todo} setTodo={setTodo} />
+            <Header />
+            <div className="todoContainer">
+                <AddTodo />
+                <Item />
             </div>
         </div>
     );

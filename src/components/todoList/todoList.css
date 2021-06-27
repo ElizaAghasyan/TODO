@@ -1,30 +1,12 @@
-.submit {
-    border: none;
-    background: none;
-}
-
-li {
-    list-style: none;
-}
-
-.iconButton {
-    font-size: 1rem;
-    cursor: pointer;
-}
-.todoItem {
+.inputContainer {
     display: flex;
-    align-items: center;
-    padding: 20px;
-    justify-content: space-around;
-}
-.todoInput {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid #172b4d;
-    background: none;
+    flex-direction: row;
+    width: 260px;
+    border-radius: 5px;
+    margin: 20px 0;
 }
 
-.todoInput:focus {
-    outline: none;
+.todoListInput {
+    width: 130px;
+    border-radius: 5px;
 }
